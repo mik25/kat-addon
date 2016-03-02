@@ -23,8 +23,5 @@ Then, run Stremio with:
 ```
 
 
-Or alternatively go to ``http://localhost:7321/stremio/v1`` and press ``Activate this add-on``
-
-
 Happy watching!
 ========

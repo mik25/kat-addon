@@ -4,11 +4,11 @@ var needle = require("needle");
 var feedparser = require("feedparser");
 // 1. torrentz.eu, kat.cr, bitsnoop, zamunda, http://www.1337x.to/	
 var manifest = { 
-    "name": "Kat.cr",
+    "name": "Kick.asS",
     "description": "kickass torrents add-on for stremio",
-    "icon": "URL to 256x256 monochrome png icon", 
+    "icon": "URL to https://raw.githubusercontent.com/mik25/reborn/main/Kickass%20Torrents.PNG?token=GHSAT0AAAAAAB7TO2G2GOFEVIBJCBWF647MZAIXRLQ", 
     "background": "URL to 1366x756 png background",
-    "id": "org.katfan.kat",
+    "id": "org.hy.kat",
     "version": "1.0.0",
     "types": ["movie", "series"],
     "filter": { "query.imdb_id": { "$exists": true }, "query.type": { "$in":["series","movie"] } }
@@ -76,7 +76,7 @@ var OPTS = {
 };
 
 function doQueries(queries, args, callback) {
-    var URL = "https://kat.cr/usearch/"+encodeURIComponent(queries[0])+"/?rss=1";
+    var URL = "https://katcr.to/usearch/"+encodeURIComponent(queries[0])+"/?rss=1";
 
     // todo async.each on all queries
     var stream = needle.get(URL, OPTS).pipe(new feedparser());
